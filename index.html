@@ -16,7 +16,7 @@
             <div class="mdl-layout__header-row" style="-webkit-app-region: drag; padding-left: 16px;">
             <!-- Title -->
                 <i id="btn-home" class="material-icons">vpn_key</i>
-                <span id="app-title" class="mdl-layout-title" style="margin-left: 20px;">Password Saver</span>
+                <span id="app-title" class="mdl-layout-title" style="margin-left: 20px;     text-transform: capitalize;">Password Saver</span>
                 <!-- Add spacer, to align navigation to the right -->
                 <div class="mdl-layout-spacer"></div>
                 <!-- <i class="material-icons" id="back">arrow_back</i> -->
@@ -50,15 +50,29 @@
 
                 <section id="section-content" style="display: none;">
 
-                    <button id="btn-add" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored btn-interation">
-                            <i class="material-icons">add</i>
-                    </button>
-                    <div class="mdl-tooltip" data-mdl-for="btn-add">Create</div>
-
-                    <button id="btn-search" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored btn-interation" style="margin-left: 0; margin-right: 10px;">
-                        <i class="material-icons">search</i>
-                    </button>
-                    <div class="mdl-tooltip" data-mdl-for="btn-search">Fetch</div>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--1-col mdl-cell--1-col-tablet mdl-cell--1-col-phone">
+                            <button id="btn-add" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored btn-interation">
+                                <i class="material-icons">add</i>
+                            </button>
+                            <div class="mdl-tooltip" data-mdl-for="btn-add">Create</div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--6-col-phone">
+                            <div class="search-bar">
+                                <!-- Icon button -->
+                                <button class="mdl-button mdl-js-button mdl-button--icon uk-margin-left uk-margin-right mdl-color-text--grey-700">
+                                    <i class="material-icons">search</i>
+                                </button>
+                                <div class="mdl-textfield mdl-js-textfield mdl-color-text--grey-700" style="width: 90%">
+                                    <input class="mdl-textfield__input" type="text" id="search" style="border: none;">
+                                    <label class="mdl-textfield__label" for="search">Search</label>
+                                </div>
+                                <button id="reset" class="mdl-button mdl-js-button mdl-color-text--grey-700">
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>                
 
                     <span id="form-filter" style="display: none;">
                         <select name="select-filter" id="select-filter" class="select-filter">
@@ -71,18 +85,13 @@
                         </button>
                     </span>
 
-                    <button id="btn-autorenew" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored btn-interation" style="position: absolute; right: 0;">
-                        <i class="material-icons">autorenew</i>
-                    </button>
-                    <div class="mdl-tooltip" data-mdl-for="btn-autorenew">Refresh</div>
-
 
                     <div id="table-content" style="width: 100%;">
                     </div>
                 </section>
 
                 <!-- MDL Modal -->
-                <dialog class="mdl-dialog" style="width: 600px; top: 10%;">
+                <dialog class="mdl-dialog" style="width: 600px; top: 15%;">
                   <div class="mdl-dialog__content">
 
                   </div>
